@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Connector : MonoBehaviour
 {
+    public float breakforce = Mathf.Infinity;
+
     private void Start()
     {
         GetComponent<Collider2D>().enabled = false;
@@ -21,6 +24,7 @@ public class Connector : MonoBehaviour
                 newhinge.anchor = transform.localPosition;
                 newhinge.connectedAnchor = collision.transform.InverseTransformPoint(GetComponent<Collider2D>().ClosestPoint(collision.transform.position));
                 newhinge.enableCollision = true;
+                newhinge.breakForce = breakforce;
                 GetComponentInParent<Grabbable>().Touch();
                 this.enabled = false;
             }

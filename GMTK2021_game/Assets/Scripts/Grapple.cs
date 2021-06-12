@@ -6,7 +6,9 @@ public class Grapple : MonoBehaviour
 {
     public float grappledistance;
     public GameObject grapplingline;
-    public float timedestroyline;
+    public float timedestroygrapple;
+    public GameObject pullline;
+    public float timedestroypull;
 
     // Start is called before the first frame update
     void Start()
@@ -27,18 +29,26 @@ public class Grapple : MonoBehaviour
             {
                 if (hit.transform.tag == "Grabbable")
                 {
-                    GameObject newline = Instantiate(grapplingline);
-                    newline.transform.position = transform.position;
-                    newline.GetComponent<SpringJoint2D>().connectedBody = hit.transform.GetComponent<Rigidbody2D>();
-                    newline.GetComponent<FixedJoint2D>().connectedBody = GetComponentInParent<Rigidbody2D>();
-                    newline.GetComponent<LineFollow>().follow = hit.transform;
-
+                    GameObject newline = null;
                     if (hit.transform.GetComponent<Grabbable>())
                     {
+                        newline = Instantiate(grapplingline);
                         hit.transform.GetComponent<Grabbable>().Grab(newline);
+                        Destroy(newline, timedestroygrapple);
+                    }
+                    else
+                    {
+                        newline = Instantiate(pullline);
+                        Destroy(newline, timedestroypull);
                     }
 
-                    Destroy(newline, timedestroyline);
+                    if (newline)
+                    {
+                        newline.transform.position = transform.position;
+                        newline.GetComponent<SpringJoint2D>().connectedBody = hit.transform.GetComponent<Rigidbody2D>();
+                        newline.GetComponent<FixedJoint2D>().connectedBody = GetComponentInParent<Rigidbody2D>();
+                        newline.GetComponent<LineFollow>().follow = hit.transform;
+                    }
                 }
             }
         }

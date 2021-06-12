@@ -60,3 +60,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e833af10f09b31498f31e5737585d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breakforce: Infinity
