@@ -26,6 +26,7 @@ public class Connector : MonoBehaviour
                 newhinge.enableCollision = true;
                 newhinge.breakForce = breakforce;
                 GetComponentInParent<Grabbable>().Touch();
+                GetComponent<Collider2D>().enabled = false;
                 this.enabled = false;
             }
         }
