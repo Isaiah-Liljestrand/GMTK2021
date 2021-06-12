@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 367725454071768468}
   - component: {fileID: 3517647191773023627}
-  - component: {fileID: 603195076828614023}
   - component: {fileID: 1795351019249576395}
+  - component: {fileID: 1596777913532425895}
   m_Layer: 6
   m_Name: Removing Waterfall
   m_TagString: Hazard
@@ -84,19 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &603195076828614023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2527990538296799213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d010d5134bf71c458b12ab081fe0b85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyedPrefab: {fileID: 0}
 --- !u!61 &1795351019249576395
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,3 +110,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1596777913532425895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2527990538296799213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f728629905e44a41ae57112b6f459a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
