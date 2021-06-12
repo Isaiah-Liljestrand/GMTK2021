@@ -20,6 +20,14 @@ public class Grabbable : MonoBehaviour
         }
     }
 
+    public bool Connected()
+    {
+        if (touchCount >= requiredTouchCount)
+            return true;
+        else
+            return false;
+    }
+
     public void Grab(GameObject grappleline)
     {
         this.grappleline = grappleline;

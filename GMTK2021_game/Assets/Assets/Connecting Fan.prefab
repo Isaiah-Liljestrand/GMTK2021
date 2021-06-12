@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7108496744577087292}
   - component: {fileID: 5965419525591755521}
   - component: {fileID: 7963528635513522335}
+  - component: {fileID: 2604683253846657025}
   m_Layer: 6
   m_Name: Connecting Fan
   m_TagString: Grabbable
@@ -175,6 +176,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15911102, y: 0.7560562}
   m_EdgeRadius: 0
+--- !u!114 &2604683253846657025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920956818493646899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a43774f833fe747abe1bfeb2df432a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 5
 --- !u!1001 &3028564732811992557
 PrefabInstance:
   m_ObjectHideFlags: 0
