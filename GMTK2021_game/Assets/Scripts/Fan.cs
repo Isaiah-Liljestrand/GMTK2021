@@ -19,7 +19,7 @@ public class Fan : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (gb.Connected())
         {
