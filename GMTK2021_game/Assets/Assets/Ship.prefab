@@ -9920,6 +9920,49 @@ MonoBehaviour:
   timedestroygrapple: 2
   pullline: {fileID: 1430500650715546164, guid: a62f85f4ab909ab40984887fccd6321f, type: 3}
   timedestroypull: 1.5
+--- !u!1 &8309554163742192207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1431027564527395714}
+  - component: {fileID: 1763520552710874602}
+  m_Layer: 0
+  m_Name: Arm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1431027564527395714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8309554163742192207}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8584019829782447989}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1763520552710874602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8309554163742192207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e5c610bcd85e94b8e24a980125cd23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8584019829660011947
 GameObject:
   m_ObjectHideFlags: 0
@@ -10011,6 +10054,7 @@ GameObject:
   - component: {fileID: 8584019829782447979}
   - component: {fileID: 8584019829782447988}
   - component: {fileID: 2967254414437872446}
+  - component: {fileID: 7690430314742533311}
   m_Layer: 0
   m_Name: ShipBody
   m_TagString: Player
@@ -10036,6 +10080,7 @@ Transform:
   - {fileID: 1148363700835941769}
   - {fileID: 2361446167971744175}
   - {fileID: 8326846589916835257}
+  - {fileID: 1431027564527395714}
   m_Father: {fileID: 8584019829660011946}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10163,6 +10208,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!233 &7690430314742533311
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8584019829782447991}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: -1.04}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
 --- !u!1001 &985998198619661550
 PrefabInstance:
   m_ObjectHideFlags: 0
