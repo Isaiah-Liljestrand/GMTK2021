@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1972680716961517912}
   - component: {fileID: 6083884074351986237}
   - component: {fileID: 8758117831892909062}
+  - component: {fileID: 7770167254184900845}
   m_Layer: 6
   m_Name: Metal Crate
   m_TagString: Grabbable
@@ -149,6 +150,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredTouchCount: 2
+--- !u!114 &7770167254184900845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6874641223620862729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d010d5134bf71c458b12ab081fe0b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyedPrefab: {fileID: 0}
 --- !u!1001 &3542790705197224985
 PrefabInstance:
   m_ObjectHideFlags: 0
