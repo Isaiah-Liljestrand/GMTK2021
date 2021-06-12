@@ -16,8 +16,10 @@ public class Connector : MonoBehaviour
             if (collision.GetComponent<Rigidbody2D>())
             {
                 HingeJoint2D newhinge = transform.parent.gameObject.AddComponent<HingeJoint2D>();
+                newhinge.autoConfigureConnectedAnchor = false;
                 newhinge.connectedBody = collision.GetComponent<Rigidbody2D>();
                 newhinge.anchor = transform.localPosition;
+                newhinge.connectedAnchor = collision.transform.InverseTransformPoint(GetComponent<Collider2D>().ClosestPoint(collision.transform.position));
                 newhinge.enableCollision = true;
                 GetComponentInParent<Grabbable>().Touch();
                 this.enabled = false;
