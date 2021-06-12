@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3517647191773023627}
   - component: {fileID: 1795351019249576395}
   - component: {fileID: 1596777913532425895}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Removing Waterfall
   m_TagString: Hazard
   m_Icon: {fileID: 0}
