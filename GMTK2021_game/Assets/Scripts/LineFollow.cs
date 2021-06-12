@@ -19,7 +19,7 @@ public class LineFollow : MonoBehaviour
         if (follow)
         {
             lr.SetPosition(0, transform.position);
-            lr.SetPosition(1, follow.position);
+            lr.SetPosition(1, new Vector3(follow.position.x, follow.position.y, 10));
         }
     }
 }

@@ -44,7 +44,7 @@ public class Grapple : MonoBehaviour
 
                     if (newline)
                     {
-                        newline.transform.position = transform.position;
+                        newline.transform.position = new Vector3(transform.position.x, transform.position.y, 10);
                         newline.GetComponent<SpringJoint2D>().connectedBody = hit.transform.GetComponent<Rigidbody2D>();
                         newline.GetComponent<FixedJoint2D>().connectedBody = GetComponentInParent<Rigidbody2D>();
                         newline.GetComponent<LineFollow>().follow = hit.transform;
