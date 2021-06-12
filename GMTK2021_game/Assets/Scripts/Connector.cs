@@ -14,6 +14,7 @@ public class Connector : MonoBehaviour
                 newhinge.connectedBody = collision.GetComponent<Rigidbody2D>();
                 newhinge.anchor = transform.localPosition;
                 newhinge.enableCollision = true;
+                GetComponentInParent<Grabbable>().Touch();
                 this.enabled = false;
             }
         }
