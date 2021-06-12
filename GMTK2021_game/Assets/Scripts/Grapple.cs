@@ -6,6 +6,7 @@ public class Grapple : MonoBehaviour
 {
     public float grappledistance;
     public GameObject grapplingline;
+    public float timedestroyline;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,8 @@ public class Grapple : MonoBehaviour
                     {
                         hit.transform.GetComponent<Grabbable>().Grab(newline);
                     }
+
+                    Destroy(newline, timedestroyline);
                 }
             }
         }

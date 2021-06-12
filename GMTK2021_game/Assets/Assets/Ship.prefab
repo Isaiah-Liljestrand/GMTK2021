@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grappledistance: 2000
   grapplingline: {fileID: 1876249812406385366, guid: e7b3ed9bfbb319d4f8f1a4d823793d70, type: 3}
+  timedestroyline: 2
 --- !u!1 &8584019829660011947
 GameObject:
   m_ObjectHideFlags: 0
