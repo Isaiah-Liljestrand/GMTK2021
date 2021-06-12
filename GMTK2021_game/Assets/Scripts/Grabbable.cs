@@ -18,7 +18,7 @@ public class Grabbable : MonoBehaviour
     {
         foreach(Connector c in GetComponentsInChildren<Connector>())
         {
-            c.enabled = true;
+            c.GetComponent<Collider2D>().enabled = true;
         }
     }
 }
