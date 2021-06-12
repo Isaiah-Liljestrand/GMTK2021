@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: 8571509c879455643b97fa9f3b196d24
+guid: 8210fe362757526429596dcfd2cae7c6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8820715720815460284
-    second: Ship_0
+      213: 7642980859614939925
+    second: Crate
   - first:
-      213: -3876855153373189597
-    second: Ship_1
+      213: -174804484191063705
+    second: MetalCrate
   - first:
-      213: -3638915416353919606
-    second: Ship_2
+      213: 3275407576765064038
+    second: Balloon
   - first:
-      213: 2227524988284003772
-    second: Ship_3
+      213: -7067808830664889489
+    second: Fan1
   - first:
-      213: -4567166467494461625
-    second: Ship_4
+      213: -3001449038190906842
+    second: Fan2
   - first:
-      213: -6349621633965948980
-    second: Ship_5
-  - first:
-      213: -7762088732943770002
-    second: Ship_6
+      213: 2058049638561703503
+    second: Spikes
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,148 +109,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ship_0
+      name: Crate
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 80
-        height: 35
+        x: 1
+        y: 1
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 440471c39c5869580800000000000000
-      internalID: -8820715720815460284
+      spriteID: 51b457af892511a60800000000000000
+      internalID: 7642980859614939925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship_1
+      name: MetalCrate
       rect:
         serializedVersion: 2
-        x: 80
-        y: 0
-        width: 80
-        height: 35
+        x: 23
+        y: 1
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32a6c8947c4a23ac0800000000000000
-      internalID: -3876855153373189597
+      spriteID: 76175ae6f38f29df0800000000000000
+      internalID: -174804484191063705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship_2
+      name: Balloon
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 80
-        height: 35
+        x: 45
+        y: 1
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8d288865b9ff7dc0800000000000000
-      internalID: -3638915416353919606
+      spriteID: 66364b356d5947d20800000000000000
+      internalID: 3275407576765064038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship_3
+      name: Fan1
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
-        width: 80
-        height: 35
+        x: 67
+        y: 1
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb569f6cc22c9ee10800000000000000
-      internalID: 2227524988284003772
+      spriteID: f6ba9dbb0591aed90800000000000000
+      internalID: -7067808830664889489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship_4
+      name: Fan2
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 80
-        height: 35
+        x: 89
+        y: 1
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74fbae2bb4a2e90c0800000000000000
-      internalID: -4567166467494461625
+      spriteID: 622713b8006b856d0800000000000000
+      internalID: -3001449038190906842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship_5
+      name: Spikes
       rect:
         serializedVersion: 2
-        x: 400
-        y: 0
-        width: 80
-        height: 35
+        x: 111
+        y: 1
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccff25104cc91e7a0800000000000000
-      internalID: -6349621633965948980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ship_6
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 80
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6e13d53c65874490800000000000000
-      internalID: -7762088732943770002
+      spriteID: f4667940e39af8c10800000000000000
+      internalID: 2058049638561703503
       vertices: []
       indices: 
       edges: []
