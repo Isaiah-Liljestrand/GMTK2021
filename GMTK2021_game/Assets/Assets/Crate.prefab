@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5055540181266482834}
   - component: {fileID: 659480475453313527}
   - component: {fileID: 2649146173124176844}
+  - component: {fileID: 3563298092673878286}
   m_Layer: 6
   m_Name: Crate
   m_TagString: Grabbable
@@ -149,6 +150,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredTouchCount: 2
+--- !u!114 &3563298092673878286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157375777698411715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d010d5134bf71c458b12ab081fe0b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &602165822936324160
 PrefabInstance:
   m_ObjectHideFlags: 0
