@@ -10,10 +10,20 @@ public class Grapple : MonoBehaviour
     public GameObject pullline;
     public float timedestroypull;
 
+    private List<GameObject> grappledobjects;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        grappledobjects = new List<GameObject>();
+    }
+
+    public void RemoveObject(GameObject obj)
+    {
+        if (grappledobjects.Contains(obj))
+        {
+            grappledobjects.Remove(obj);
+        }
     }
 
     // Update is called once per frame
@@ -29,30 +39,36 @@ public class Grapple : MonoBehaviour
             {
                 if (hit.transform.tag == "Grabbable")
                 {
-                    GameObject newline = null;
-                    if (hit.transform.GetComponent<Grabbable>())
+                    if (!grappledobjects.Contains(hit.transform.gameObject))
                     {
-                        newline = Instantiate(grapplingline);
-                        hit.transform.GetComponent<Grabbable>().Grab(newline);
-                        Destroy(newline, timedestroygrapple);
-                    }
-                    else
-                    {
+                        GameObject newline = null;
+                        if (hit.transform.GetComponent<Grabbable>())
+                        {
+                            newline = Instantiate(grapplingline);
+                            hit.transform.GetComponent<Grabbable>().Grab(newline);
+                            Destroy(newline, timedestroygrapple);
+                        }
+                        else
+                        {
+                            if (hit.transform.GetComponent<Rigidbody2D>())
+                            {
+                                newline = Instantiate(pullline);
+                                Destroy(newline, timedestroypull);
+                            }
+                        }
+
                         if (hit.transform.GetComponent<Rigidbody2D>())
                         {
-                            newline = Instantiate(pullline);
-                            Destroy(newline, timedestroypull);
-                        }
-                    }
-
-                    if (hit.transform.GetComponent<Rigidbody2D>())
-                    {
-                        if (newline)
-                        {
-                            newline.transform.position = new Vector3(transform.position.x, transform.position.y, 10);
-                            newline.GetComponent<SpringJoint2D>().connectedBody = hit.transform.GetComponent<Rigidbody2D>();
-                            newline.GetComponent<FixedJoint2D>().connectedBody = GetComponentInParent<Rigidbody2D>();
-                            newline.GetComponent<LineFollow>().follow = hit.transform;
+                            if (newline)
+                            {
+                                newline.transform.position = new Vector3(transform.position.x, transform.position.y, 10);
+                                newline.GetComponent<SpringJoint2D>().connectedBody = hit.transform.GetComponent<Rigidbody2D>();
+                                newline.GetComponent<FixedJoint2D>().connectedBody = GetComponentInParent<Rigidbody2D>();
+                                newline.GetComponent<LineFollow>().follow = hit.transform;
+                                newline.GetComponent<GrappleLineScript>().grapple = this;
+                                newline.GetComponent<GrappleLineScript>().objectholding = hit.transform.gameObject;
+                                grappledobjects.Add(hit.transform.gameObject);
+                            }
                         }
                     }
                 }
