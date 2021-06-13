@@ -209,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4179415403770731524, guid: 49c9938a901401542b0e4d0300d86bea, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4179415403770731524, guid: 49c9938a901401542b0e4d0300d86bea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -217,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4179415403770731524, guid: 49c9938a901401542b0e4d0300d86bea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -22.2
       objectReference: {fileID: 0}
     - target: {fileID: 4179415403770731524, guid: 49c9938a901401542b0e4d0300d86bea, type: 3}
       propertyPath: m_LocalPosition.z
@@ -266,7 +266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4179415403770731524, guid: 49c9938a901401542b0e4d0300d86bea, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4179415403770731524, guid: 49c9938a901401542b0e4d0300d86bea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -274,7 +274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4179415403770731524, guid: 49c9938a901401542b0e4d0300d86bea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -22.2
       objectReference: {fileID: 0}
     - target: {fileID: 4179415403770731524, guid: 49c9938a901401542b0e4d0300d86bea, type: 3}
       propertyPath: m_LocalPosition.z
@@ -383,21 +383,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5616730115072332904, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 85.3609
-      objectReference: {fileID: 0}
-    - target: {fileID: 5765328942809520183, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 22.264626
-      objectReference: {fileID: 0}
     - target: {fileID: 7357582447257215485, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
       propertyPath: m_Name
       value: Tutorial Part 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7442814469913580037, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_Size.y
-      value: 22.264626
       objectReference: {fileID: 0}
     - target: {fileID: 8947153939890277003, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
       propertyPath: m_RootOrder
