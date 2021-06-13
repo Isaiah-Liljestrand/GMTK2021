@@ -383,6 +383,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 366231589734533953, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.45699906
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191314242858704588, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.9381981
+      objectReference: {fileID: 0}
+    - target: {fileID: 3523959917912598902, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.45699906
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321753539478329183, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.45699906
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321753539497693777, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.45699906
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321753540549460190, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.45699906
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778360643583822939, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.45699906
+      objectReference: {fileID: 0}
     - target: {fileID: 7357582447257215485, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
       propertyPath: m_Name
       value: Tutorial Part 1
