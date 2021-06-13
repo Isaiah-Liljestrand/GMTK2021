@@ -8,12 +8,13 @@ public class Arm : MonoBehaviour
     public float grabstrength;
     public HingeJoint2D hinge;
     public bool armon;
-
+    public LineRenderer lr;
 
     // Start is called before the first frame update
     void Start()
     {
-        hinge = this.GetComponentInParent<HingeJoint2D>();
+        lr = GetComponent<LineRenderer>();
+        hinge = GetComponentInParent<HingeJoint2D>();
         armon = false;
     }
 
@@ -28,15 +29,19 @@ public class Arm : MonoBehaviour
             {
                 Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector2 objectpos = hinge.connectedBody.position;
-                Vector2 shippos = this.GetComponentInParent<Rigidbody2D>().position;
+                //Vector2 shippos = GetComponentInParent<Rigidbody2D>().position;
 
-                float mouseangle = Vector2.Angle(shippos, mousepos);
+                lr.enabled = true;
+                lr.SetPosition(0, new Vector3(transform.position.x, transform.position.y, 10));
+                lr.SetPosition(1, new Vector3(objectpos.x, objectpos.y, 10));
 
-                float objectangle = Vector2.Angle(shippos, objectpos);
+                float mouseangle = Vector2.Angle(transform.position, mousepos);
+
+                Debug.Log(mouseangle);
+
+                float objectangle = Vector2.Angle(transform.position, objectpos);
 
                 float dif = mouseangle - objectangle;
-
-                Debug.Log(shippos);
 
                 if (dif > 10)
                 {
@@ -58,6 +63,7 @@ public class Arm : MonoBehaviour
                 //Simply turn off hinge and arm component
                 armon = false;
                 hinge.enabled = false;
+                lr.enabled = false;
             }
         }
         else
