@@ -7,7 +7,6 @@ public class Arm : MonoBehaviour
     public float grabdistance;
     public float grabstrength;
     public HingeJoint2D hinge;
-    public JointMotor2D motor;
     public bool armon;
 
 
@@ -15,7 +14,6 @@ public class Arm : MonoBehaviour
     void Start()
     {
         hinge = this.GetComponentInParent<HingeJoint2D>();
-        motor = hinge.motor;
         armon = false;
     }
 
@@ -25,10 +23,10 @@ public class Arm : MonoBehaviour
         if (armon)
         {
             JointMotor2D m = hinge.motor;
-            m.motorSpeed = 500;
+
             if (Input.GetMouseButton(1))
             {
-                Vector2 mousepos = Input.mousePosition;
+                Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector2 objectpos = hinge.connectedBody.position;
                 Vector2 shippos = this.GetComponentInParent<Rigidbody2D>().position;
 
@@ -38,15 +36,22 @@ public class Arm : MonoBehaviour
 
                 float dif = mouseangle - objectangle;
 
+                Debug.Log(shippos);
+
                 if (dif > 10)
                 {
-                    motor.motorSpeed = 500;
+                    m.motorSpeed = -100;
                 }
 
                 if (dif < -10)
                 {
-                    motor.motorSpeed = -500;
+                    m.motorSpeed = 100;
                 }
+                if (dif > -10 && dif < 10)
+                {
+                    m.motorSpeed = 0;
+                }
+                hinge.motor = m;
             }
             else
             {
@@ -67,7 +72,9 @@ public class Arm : MonoBehaviour
                     hinge.connectedBody = hit.transform.GetComponent<Rigidbody2D>();
                     armon = true;
                     hinge.enabled = true;
-                    //motor.motorSpeed = 0;
+                    JointMotor2D m = hinge.motor;
+                    m.motorSpeed = 0;
+                    hinge.motor = m;
                 }
             }
         }
