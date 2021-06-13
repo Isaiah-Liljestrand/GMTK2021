@@ -150,7 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d010d5134bf71c458b12ab081fe0b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyedPrefab: {fileID: 8722005890785460626, guid: 8b021f83f694a0c40b4f263e1f49fa92, type: 3}
+  destroyedPrefab: {fileID: 2419209238603979453, guid: 21752cc0619c634498dd338777075017, type: 3}
+  massmanager: {fileID: 0}
 --- !u!1001 &7653416332805736410
 PrefabInstance:
   m_ObjectHideFlags: 0
