@@ -9,6 +9,7 @@ public class Grapple : MonoBehaviour
     public float timedestroygrapple;
     public GameObject pullline;
     public float timedestroypull;
+    public GameObject target;
 
     private List<GameObject> grappledobjects;
 
@@ -32,12 +33,15 @@ public class Grapple : MonoBehaviour
         Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousepos.z = 0;
 
-        if (Input.GetMouseButtonDown(0))
+        RaycastHit2D hit = Physics2D.Linecast(transform.position, Vector2.MoveTowards(transform.position, Vector2.MoveTowards(mousepos, transform.position, -500), grappledistance), LayerMask.GetMask("Obstacle"));
+        if (hit)
         {
-            RaycastHit2D hit = Physics2D.Linecast(transform.position, Vector2.MoveTowards(transform.position, Vector2.MoveTowards(mousepos, transform.position, -500), grappledistance), LayerMask.GetMask("Obstacle"));
-            if (hit)
+            if (hit.transform.tag == "Grabbable")
             {
-                if (hit.transform.tag == "Grabbable")
+                target.SetActive(true);
+                target.transform.position = hit.point;
+
+                if (Input.GetMouseButtonDown(0))
                 {
                     if (!grappledobjects.Contains(hit.transform.gameObject))
                     {
@@ -72,6 +76,10 @@ public class Grapple : MonoBehaviour
                         }
                     }
                 }
+            }
+            else
+            {
+                target.SetActive(false);
             }
         }
     }
