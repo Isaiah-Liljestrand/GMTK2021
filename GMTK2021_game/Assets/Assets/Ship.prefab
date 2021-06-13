@@ -9833,8 +9833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85b3e22a8705e84d89226703bdc7cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 5
-  attachmentscaler: 2
+  strength: 10
+  attachmentscaler: 3
 --- !u!1 &6172482548315673821
 GameObject:
   m_ObjectHideFlags: 0
@@ -10093,7 +10093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabdistance: 2000
-  grabstrength: 50
+  grabstrength: 10
   hinge: {fileID: 0}
   armon: 0
   lr: {fileID: 0}

@@ -17,6 +17,7 @@ public class Grabbable : MonoBehaviour
         {
             this.tag = "Player";
             gameObject.layer = LayerMask.NameToLayer("Default");
+            massmanager.GetComponent<MassManager>().AddObject(this.transform.gameObject);
             if (grappleline)
                 Destroy(grappleline);
         }
