@@ -9790,51 +9790,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &4647679503446732142
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8136988285477950497}
-  - component: {fileID: 7711425998262542052}
-  m_Layer: 0
-  m_Name: MassManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8136988285477950497
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4647679503446732142}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8584019829782447989}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7711425998262542052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4647679503446732142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c85b3e22a8705e84d89226703bdc7cc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  strength: 30
-  attachmentscaler: 5
 --- !u!1 &6172482548315673821
 GameObject:
   m_ObjectHideFlags: 0
@@ -10094,7 +10049,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabdistance: 2000
-  grabstrength: 10
+  grabstrength: 25
+  grabscaler: 1
   hinge: {fileID: 0}
   armon: 0
   lr: {fileID: 0}
@@ -10266,10 +10222,10 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 1.04}
+  m_ConnectedAnchor: {x: 0, y: 1.0400009}
   m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: 0
+    m_MotorSpeed: 50
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
@@ -10315,7 +10271,6 @@ Transform:
   - {fileID: 2361446167971744175}
   - {fileID: 8326846589916835257}
   - {fileID: 1431027564527395714}
-  - {fileID: 8136988285477950497}
   m_Father: {fileID: 8584019829660011946}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

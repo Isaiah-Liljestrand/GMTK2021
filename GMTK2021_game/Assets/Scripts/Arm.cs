@@ -7,6 +7,7 @@ public class Arm : MonoBehaviour
 {
     public float grabdistance;
     public float grabstrength;
+    public float grabscaler;
     public HingeJoint2D hinge;
     public bool armon;
     public LineRenderer lr;
@@ -43,7 +44,7 @@ public class Arm : MonoBehaviour
 
                 Vector2 shiptoobject = shippos - objectpos;
 
-               
+
 
                 float dif = Vector2.SignedAngle(shiptomouse, shiptoobject);
 
@@ -53,7 +54,15 @@ public class Arm : MonoBehaviour
                 lr.SetPosition(0, new Vector3(transform.position.x, transform.position.y, 10));
                 lr.SetPosition(1, new Vector3(objectpos.x, objectpos.y, 10));
 
-                m.motorSpeed = (Mathf.Clamp(dif, -90, 90)/90) * -grabstrength;
+                m.motorSpeed = ((Mathf.Clamp(dif, -90, 90) / 90) * -grabstrength);
+                if (dif < 0)
+                {
+                    m.motorSpeed += grabstrength * grabscaler;
+                }
+                if (dif > 0)
+                {
+                    m.motorSpeed -= grabstrength * grabscaler;
+                }
 
                 hinge.motor = m;
             }

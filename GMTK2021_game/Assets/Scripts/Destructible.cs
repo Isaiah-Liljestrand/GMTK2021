@@ -5,15 +5,9 @@ using UnityEngine;
 public class Destructible : MonoBehaviour
 {
     public GameObject destroyedPrefab;
-    public GameObject massmanager;
 
     public void Destructo()
     {
-        if (massmanager)
-        {
-            if(this.tag == "Player")
-            massmanager.GetComponent<MassManager>().RemoveObject(this.transform.gameObject);
-        }
         if (destroyedPrefab)
         {
             GameObject newthingy = Instantiate(destroyedPrefab);

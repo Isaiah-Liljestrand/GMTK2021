@@ -7,7 +7,6 @@ public class Grabbable : MonoBehaviour
     public int requiredTouchCount = 2;
     private int touchCount = 0;
     private GameObject grappleline;
-    public GameObject massmanager;
     
 
     public void Touch()
@@ -17,7 +16,6 @@ public class Grabbable : MonoBehaviour
         {
             this.tag = "Player";
             gameObject.layer = LayerMask.NameToLayer("Default");
-            massmanager.GetComponent<MassManager>().AddObject(this.transform.gameObject);
             if (grappleline)
                 Destroy(grappleline);
         }
