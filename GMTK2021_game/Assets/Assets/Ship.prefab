@@ -9963,6 +9963,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e5c610bcd85e94b8e24a980125cd23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grabdistance: 2000
+  grabstrength: 2000
+  hinge: {fileID: 0}
 --- !u!1 &8584019829660011947
 GameObject:
   m_ObjectHideFlags: 0
@@ -10224,7 +10227,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: -1.04}
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000

@@ -2,61 +2,74 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grapple : MonoBehaviour
+public class Arm : MonoBehaviour
 {
     public float grabdistance;
     public float grabstrength;
-    public HingeJoint2D joint;
+    public HingeJoint2D hinge;
+    public JointMotor2D motor;
+    public bool armon;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        joint = this.GetComponentInParent<HingeJoint2D>();
-        this.enabled = false;
+        hinge = this.GetComponentInParent<HingeJoint2D>();
+        motor = hinge.motor;
+        armon = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousepos.z = 0;
-
-        if (Input.GetMouseButtonDown(0))
+        if (armon == true)
         {
-            RaycastHit2D hit = Physics2D.Linecast(transform.position, Vector2.MoveTowards(transform.position, Vector2.MoveTowards(mousepos, transform.position, -500), grappledistance), LayerMask.GetMask("Obstacle"));
-            if (hit)
+            JointMotor2D m = hinge.motor;
+            m.motorSpeed = 500;
+            if (Input.GetMouseButton(1))
             {
-                if (hit.transform.tag == "Grabbable")
-                {
-                    GameObject newline = null;
-                    if (hit.transform.GetComponent<Grabbable>())
-                    {
-                        newline = Instantiate(grapplingline);
-                        hit.transform.GetComponent<Grabbable>().Grab(newline);
-                        Destroy(newline, timedestroygrapple);
-                    }
-                    else
-                    {
-                        if (hit.transform.GetComponent<Rigidbody2D>())
-                        {
-                            newline = Instantiate(pullline);
-                            Destroy(newline, timedestroypull);
-                        }
-                    }
+                Vector2 mousepos = Input.mousePosition;
+                Vector2 objectpos = hinge.connectedBody.position;
+                Vector2 shippos = this.GetComponentInParent<Rigidbody2D>().position;
 
-                    if (hit.transform.GetComponent<Rigidbody2D>())
-                    {
-                        if (newline)
-                        {
-                            newline.transform.position = new Vector3(transform.position.x, transform.position.y, 10);
-                            newline.GetComponent<SpringJoint2D>().connectedBody = hit.transform.GetComponent<Rigidbody2D>();
-                            newline.GetComponent<FixedJoint2D>().connectedBody = GetComponentInParent<Rigidbody2D>();
-                            newline.GetComponent<LineFollow>().follow = hit.transform;
-                        }
-                    }
+                float mouseangle = Vector2.Angle(shippos, mousepos);
+
+                float objectangle = Vector2.Angle(shippos, objectpos);
+
+                float dif = mouseangle - objectangle;
+
+                if (dif > 10)
+                {
+                    motor.motorSpeed = 500;
+                }
+
+                if (dif < -10)
+                {
+                    motor.motorSpeed = -500;
                 }
             }
-        }*/
+            else
+            {
+                //Simply turn off hinge and arm component
+                armon = false;
+                hinge.enabled = false;
+            }
+        }
+        else
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                Vector3 mouseposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Linecast(transform.position, Vector2.MoveTowards(transform.position, Vector2.MoveTowards(mouseposition, transform.position, -500), grabdistance), LayerMask.GetMask("Obstacle"));
+                if (hit && hit.transform.tag == "Grabbable")
+                {
+                    //Add arm stuff
+                    hinge.connectedBody = hit.transform.GetComponent<Rigidbody2D>();
+                    armon = true;
+                    hinge.enabled = true;
+                    //motor.motorSpeed = 0;
+                }
+            }
+        }
     }
 }
