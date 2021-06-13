@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class MassManager : MonoBehaviour
 {
-    float strength;
-    float attachmentscaler;
+    public float strength;
+    public float attachmentscaler;
     List<GameObject> attachedObjects;
     // Start is called before the first frame update
     void Start()
     {
-        
-        strength = 5;
+
     }
 
-    void AddObject(GameObject recruit)
+    public void AddObject(GameObject recruit)
     {
         float objectmass = recruit.GetComponent<Rigidbody2D>().mass;
         strength += objectmass * attachmentscaler;
@@ -22,7 +21,7 @@ public class MassManager : MonoBehaviour
         UpdateStrength();
     }
 
-    void RemoveObject(GameObject fired)
+    public void RemoveObject(GameObject fired)
     {
         float objectmass = fired.GetComponent<Rigidbody2D>().mass;
         if(attachedObjects.Contains(fired))

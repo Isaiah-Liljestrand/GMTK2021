@@ -7,6 +7,8 @@ public class Grabbable : MonoBehaviour
     public int requiredTouchCount = 2;
     private int touchCount = 0;
     private GameObject grappleline;
+    public GameObject massmanager;
+    
 
     public void Touch()
     {

@@ -51,6 +51,7 @@ public class Grapple : MonoBehaviour
                         {
                             newline = Instantiate(grapplingline);
                             hit.transform.GetComponent<Grabbable>().Grab(newline);
+                            hit.transform.GetComponent<Grabbable>().massmanager = this.transform.parent.GetComponentInChildren<MassManager>().transform.gameObject;
                             Destroy(newline, timedestroygrapple);
                         }
                         else
