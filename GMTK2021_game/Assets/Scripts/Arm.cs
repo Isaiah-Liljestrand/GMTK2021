@@ -27,6 +27,13 @@ public class Arm : MonoBehaviour
 
             if (Input.GetMouseButton(1))
             {
+                if (!hinge.connectedBody)
+                {
+                    armon = false;
+                    hinge.enabled = false;
+                    lr.enabled = false;
+                    return;
+                }
                 Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector2 objectpos = hinge.connectedBody.position;
                 Vector2 shippos = this.transform.position;
