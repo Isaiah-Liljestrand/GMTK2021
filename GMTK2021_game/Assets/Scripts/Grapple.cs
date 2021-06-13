@@ -9,6 +9,7 @@ public class Grapple : MonoBehaviour
     public float timedestroygrapple;
     public GameObject pullline;
     public float timedestroypull;
+    public GameObject grapplesound;
     public GameObject target;
 
     private List<GameObject> grappledobjects;
@@ -68,6 +69,7 @@ public class Grapple : MonoBehaviour
                         {
                             if (newline)
                             {
+                                Destroy(Instantiate(grapplesound), timedestroypull);
                                 newline.transform.position = new Vector3(transform.position.x, transform.position.y, 10);
                                 newline.GetComponent<SpringJoint2D>().connectedBody = hit.transform.GetComponent<Rigidbody2D>();
                                 newline.GetComponent<FixedJoint2D>().connectedBody = GetComponentInParent<Rigidbody2D>();

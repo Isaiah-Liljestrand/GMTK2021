@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredTouchCount: 1
+  massmanager: {fileID: 0}
 --- !u!61 &5965419525591755521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -223,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d010d5134bf71c458b12ab081fe0b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyedPrefab: {fileID: 6042949419766051699, guid: 3c3ce17198b5da44287e3b89155dc423, type: 3}
+  destroyedPrefab: {fileID: 8722005890785460626, guid: 8b021f83f694a0c40b4f263e1f49fa92, type: 3}
 --- !u!1001 &3028564732811992557
 PrefabInstance:
   m_ObjectHideFlags: 0

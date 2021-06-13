@@ -9965,6 +9965,7 @@ MonoBehaviour:
   timedestroygrapple: 2
   pullline: {fileID: 1430500650715546164, guid: a62f85f4ab909ab40984887fccd6321f, type: 3}
   timedestroypull: 1.5
+  grapplesound: {fileID: 180644186666038647, guid: ef80ce117960942408ee5fa41aadde4d, type: 3}
   target: {fileID: 8043711997516558611}
 --- !u!1 &8043711997516558611
 GameObject:
