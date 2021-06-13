@@ -29,28 +29,30 @@ public class Arm : MonoBehaviour
             {
                 Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector2 objectpos = hinge.connectedBody.position;
+                Vector2 shippos = this.transform.position;
+
+                Vector2 shiptomouse = shippos - mousepos;
+
+                Vector2 shiptoobject = shippos - objectpos;
+
+               
+
+                float dif = Vector2.SignedAngle(shiptomouse, shiptoobject);
+
                 //Vector2 shippos = GetComponentInParent<Rigidbody2D>().position;
 
                 lr.enabled = true;
                 lr.SetPosition(0, new Vector3(transform.position.x, transform.position.y, 10));
                 lr.SetPosition(1, new Vector3(objectpos.x, objectpos.y, 10));
 
-                float mouseangle = Vector2.Angle(transform.position, mousepos);
-
-                Debug.Log(mouseangle);
-
-                float objectangle = Vector2.Angle(transform.position, objectpos);
-
-                float dif = mouseangle - objectangle;
-
                 if (dif > 10)
                 {
-                    m.motorSpeed = -100;
+                    m.motorSpeed = -grabstrength;
                 }
 
                 if (dif < -10)
                 {
-                    m.motorSpeed = 100;
+                    m.motorSpeed = grabstrength;
                 }
                 if (dif > -10 && dif < 10)
                 {
