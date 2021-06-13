@@ -16,6 +16,7 @@ public class Grapple : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        target.transform.parent = null;
         grappledobjects = new List<GameObject>();
     }
 
@@ -81,6 +82,10 @@ public class Grapple : MonoBehaviour
             {
                 target.SetActive(false);
             }
+        }
+        else
+        {
+            target.SetActive(false);
         }
     }
 }
