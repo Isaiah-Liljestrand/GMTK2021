@@ -1306,58 +1306,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 16269662732263684, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 56.1161
-      objectReference: {fileID: 0}
-    - target: {fileID: 366231589734533953, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.45699906
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120911395149186455, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 42.0787
-      objectReference: {fileID: 0}
-    - target: {fileID: 2191314242858704588, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.9381981
-      objectReference: {fileID: 0}
-    - target: {fileID: 2789868751858124600, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_Size.y
-      value: 97.7677
-      objectReference: {fileID: 0}
-    - target: {fileID: 2954380101531001771, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_Size.y
-      value: 65.842514
-      objectReference: {fileID: 0}
-    - target: {fileID: 3523959917912598902, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.45699906
-      objectReference: {fileID: 0}
-    - target: {fileID: 5793983256015822234, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 97.7677
-      objectReference: {fileID: 0}
-    - target: {fileID: 6321753539478329183, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.45699906
-      objectReference: {fileID: 0}
-    - target: {fileID: 6321753539497693777, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.45699906
-      objectReference: {fileID: 0}
-    - target: {fileID: 6321753540549460190, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.45699906
-      objectReference: {fileID: 0}
-    - target: {fileID: 6778360643583822939, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.45699906
-      objectReference: {fileID: 0}
-    - target: {fileID: 6908476504773622025, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 65.842514
-      objectReference: {fileID: 0}
     - target: {fileID: 7357582447257215485, guid: 8b88a968944bfc34995e35d8f8c64aaf, type: 3}
       propertyPath: m_Name
       value: Tutorial Part 1
