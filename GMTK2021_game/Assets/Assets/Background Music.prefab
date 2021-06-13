@@ -142,4 +142,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music:
   - {fileID: 8300000, guid: b5bf07d8fdafb6a4abe9d8be9458437d, type: 3}
+  - {fileID: 8300000, guid: ee1e1b4cc35355c45b79c30fe71d131f, type: 3}
+  - {fileID: 8300000, guid: de5c7e7f03d421f44b4f19e895a8abed, type: 3}
+  - {fileID: 8300000, guid: 0611ee67970ebf94b8a66aec9cc01b0c, type: 3}
+  - {fileID: 8300000, guid: 50e3e18612f6bc14b93b3f9b743f02d0, type: 3}
+  - {fileID: 8300000, guid: 7dfe57648db3a694782ecc0217cf0d6e, type: 3}
+  - {fileID: 8300000, guid: 66b5044e294a5ee4fa9c0c0fefb96dbf, type: 3}
+  - {fileID: 8300000, guid: 294991ab4bb829040ade94f500c79292, type: 3}
+  - {fileID: 8300000, guid: a49a4fb89c66cc94b9cb17371892a917, type: 3}
+  - {fileID: 8300000, guid: cd14d4103d55c9a4989e3b1486528a7b, type: 3}
+  - {fileID: 8300000, guid: f8a373dbdeb1dbe4d90230e4460cd099, type: 3}
+  - {fileID: 8300000, guid: 1d2f6e6bc73d82449a4f0c4bc18a5ca8, type: 3}
   musicvolumes: []
