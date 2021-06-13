@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 
 public class Arm : MonoBehaviour
@@ -52,7 +53,8 @@ public class Arm : MonoBehaviour
                 lr.SetPosition(0, new Vector3(transform.position.x, transform.position.y, 10));
                 lr.SetPosition(1, new Vector3(objectpos.x, objectpos.y, 10));
 
-                if (dif > 10)
+                m.motorSpeed = (Mathf.Clamp(dif, -90, 90)/90) * -grabstrength;
+                /*if (dif > 10)
                 {
                     m.motorSpeed = -grabstrength;
                 }
@@ -64,7 +66,7 @@ public class Arm : MonoBehaviour
                 if (dif > -10 && dif < 10)
                 {
                     m.motorSpeed = 0;
-                }
+                }*/
                 hinge.motor = m;
             }
             else
