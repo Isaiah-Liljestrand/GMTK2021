@@ -17,9 +17,7 @@ public class MassManager : MonoBehaviour
     {
         Debug.Log("AddObject called");
         float objectmass = recruit.GetComponent<Rigidbody2D>().mass;
-        Debug.Log(strength);
         strength += objectmass * attachmentscaler;
-        Debug.Log(strength);
         attachedObjects.Add(recruit);
         UpdateStrength();
     }
@@ -28,6 +26,7 @@ public class MassManager : MonoBehaviour
     {
 
         float objectmass = fired.GetComponent<Rigidbody2D>().mass;
+        strength -= objectmass * attachmentscaler;
         if(attachedObjects.Contains(fired))
         {
             attachedObjects.Remove(fired);
@@ -37,7 +36,6 @@ public class MassManager : MonoBehaviour
 
     void UpdateStrength()
     {
-        Debug.Log("Update Strength called");
         this.transform.parent.GetComponentInChildren<Arm>().grabstrength = strength;
     }
 
