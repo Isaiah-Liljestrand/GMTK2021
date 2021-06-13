@@ -22,7 +22,7 @@ public class Arm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (armon == true)
+        if (armon)
         {
             JointMotor2D m = hinge.motor;
             m.motorSpeed = 500;
