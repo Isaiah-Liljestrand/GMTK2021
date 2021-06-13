@@ -17,6 +17,9 @@ TextureImporter:
   - first:
       213: -4500993874483076431
     second: Arrow
+  - first:
+      213: 3411122762858479303
+    second: Skull
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -210,7 +213,7 @@ TextureImporter:
         width: 27
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,6 +221,27 @@ TextureImporter:
       bones: []
       spriteID: 1b22a3f1be14981c0800000000000000
       internalID: -4500993874483076431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cebd65741eb65f20800000000000000
+      internalID: 3411122762858479303
       vertices: []
       indices: 
       edges: []
