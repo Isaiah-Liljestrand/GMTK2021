@@ -7,4 +7,4 @@ By Chris Andersen, Damon Estrada, Jacob Marks, and Isaiah Liljestrand.
 
 Created using Unity Engine and C#.
 
-![alt text](screenshot1.jpg "Gameplay Screenshot.")
+![alt text](screenshot.jpg "Gameplay Screenshot.")
